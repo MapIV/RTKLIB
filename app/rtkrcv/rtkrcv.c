@@ -466,6 +466,7 @@ static int startsvr(vt_t *vt)
         trace(2,"command exec error: %s (%d)\n",startcmd,ret);
         vt_printf(vt,"command exec error: %s (%d)\n",startcmd,ret);
     }
+    solopt[1] = solopt[0];
     solopt[0].posf=strfmt[3];
     solopt[1].posf=strfmt[4];
     
@@ -1683,7 +1684,7 @@ int main(int argc, char **argv)
     
     /* start rtk server */
     if (start) {
-        startsvr(NULL);
+        startsvr(con[0] -> vt);
     }
     while (!intflg) {
         /* accept remote console connection */
