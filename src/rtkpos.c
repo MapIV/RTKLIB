@@ -1927,6 +1927,7 @@ extern int rtkpos(rtk_t *rtk, const obsd_t *obs, int n, const nav_t *nav)
     /* check number of data of base station and age of differential */
     if (nr==0) {
         errmsg(rtk,"no base station observation data for rtk\n");
+        rtk->sol.stat=SOLQ_SINGLE;
         outsolstat(rtk);
         return 1;
     }
