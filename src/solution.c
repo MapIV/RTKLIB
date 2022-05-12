@@ -1161,7 +1161,7 @@ static int outecef(uint8_t *buff, const char *s, const sol_t *sol,
     /* Added output of latitude and longitude. @SEKINO 19/9/12 ------------------------------------ */
     
     /* Change data delimitation and output format @SEKINO 19/3/8 ---------------------------------- */
-    p+=sprintf(p,"\n%s\n%.4f\n%.4f\n%.4f\n%.4f\n%.4f\n%.4f\n%.9f\n%.9f\n%.4f\n%d\n%.4f\n%.4f\n%.4f\n%.4f\n%.4f\n%.4f\n",
+    p+=sprintf(p,"\n%s\n%.4f\n%.4f\n%.4f\n%.4f\n%.4f\n%.4f\n%.9f\n%.9f\n%.4f\n%d\n%.4f\n%.4f\n%.4f\n%.4f\n%.4f\n%.4f\nRTKLIB\n",
                s,sol->rr[0],sol->rr[1],sol->rr[2],sol->rr[3],sol->rr[4],sol->rr[5],
                pos[0]*R2D,pos[1]*R2D,pos[2],sol->stat,SQRT(Q[4]),
                SQRT(Q[0]),SQRT(Q[8]),sqvar(Q[1]),sqvar(Q[2]),sqvar(Q[5]));
